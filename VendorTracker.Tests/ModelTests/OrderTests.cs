@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TravelDiary.Models;
+using VendorTracker.Models;
 using System;
 using System.Collections.Generic;
 
@@ -11,8 +11,11 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      string newOrderTitle = "Linda's b&b";
-      Order newOrder = new Order(newOrderTitle);
+      string newOrderTitle = "Lindas b&b";
+      string newOrderDescription = "Lindas b&b Description";
+      string newOrderDate = "12-18-20";
+      int newOrderPrice = 100;
+      Order newOrder = new Order(newOrderTitle, newOrderDescription, newOrderDate, newOrderPrice);
       Assert.AreEqual(newOrderTitle, newOrder.Title);
     }
   }
