@@ -29,5 +29,9 @@ namespace VendorTracker.Models
       _vendorInstances.Clear();
     }
     
+    public static Vendor Find(int Id)
+    {
+      return _vendorInstances[Id - 1];
+    }
   }
 }
