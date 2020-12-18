@@ -12,7 +12,7 @@ namespace VendorTracker.Models
 
     public Vendor(string name, string description)
     {
-      Name = "Not the name you expect";
+      Name = name;
       Description = description;
       _vendorInstances.Add(this);
       Id = _vendorInstances.Count;
