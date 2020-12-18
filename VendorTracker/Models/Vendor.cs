@@ -36,8 +36,7 @@ namespace VendorTracker.Models
 
     public void AddOrder(Order order)
     {
-      Order failOrder = new Order("newOrderTitle", "newOrderDescription", "newOrderDate", 10);
-      Orders.Add(failOrder);
+      Orders.Add(order);
     }
   }
 }
