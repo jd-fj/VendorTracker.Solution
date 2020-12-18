@@ -13,7 +13,7 @@ namespace VendorTracker.Tests
     {
       Vendor.ClearAll();
     }
-    
+
     [TestMethod]
     public void VendorConstructor_CreatesAnInstanceOfVendor_Vendor()
     {
@@ -38,6 +38,13 @@ namespace VendorTracker.Tests
       List<Vendor> newList = new List<Vendor> { newVendor, newVendor2 };
       List<Vendor> getResults = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, getResults);
+    }
+    [TestMethod]
+    public void FindVendor_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor newVendor = new Vendor("vendorName", "vendorDescription");
+      Vendor newVendor2 = new Vendor("vendorName2", "vendorDescription2");
+      Vendor result = Vendor.Find(2);
     }
   }
 }
