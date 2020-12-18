@@ -19,7 +19,7 @@ namespace VendorTracker.Models
       Date = date;
       Price = price;
       _orderInstances.Add(this);
-      Id = _orderInstances.Count;
+      Id = _orderInstances.Count + 1;
     }
 
     public static List<Order> GetAll()

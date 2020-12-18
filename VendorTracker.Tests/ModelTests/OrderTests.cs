@@ -12,7 +12,7 @@ namespace VendorTracker.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -40,5 +40,14 @@ namespace VendorTracker.Tests
 
       CollectionAssert.AreEqual(newList, getResults);
     }
+
+    [TestMethod]
+    public void GetId_OrderObjsInstantiatedWithIdAndGetterReturnsId_Int()
+    {
+      Order newOrder = new Order("newOrderTitle", "newOrderDescription", "newOrderDate", 10);
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
+
   }
 }
