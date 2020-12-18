@@ -45,6 +45,7 @@ namespace VendorTracker.Tests
       Vendor newVendor = new Vendor("vendorName", "vendorDescription");
       Vendor newVendor2 = new Vendor("vendorName2", "vendorDescription2");
       Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor2, result);
     }
   }
 }
