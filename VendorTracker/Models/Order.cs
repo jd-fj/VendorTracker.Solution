@@ -14,7 +14,7 @@ namespace VendorTracker.Models
 
     public Order( string title, string description, string date, int price)
     {
-      Title = "not the title you were expecting";
+      Title = title;
       Description = description;
       Date = date;
       Price = price;
