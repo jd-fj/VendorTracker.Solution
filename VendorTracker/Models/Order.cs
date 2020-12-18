@@ -24,6 +24,9 @@ namespace VendorTracker.Models
 
     public static List<Order> GetAll()
     {
+      Order newFailOrder = new Order("title", "description", "Date", 10);
+      Order newFailOrder2 = new Order("title2", "description2", "Date2", 10);
+      List<Order> failOrder = new List<Order> { newFailOrder, newFailOrder2 };
       return _orderInstances;
     }
 
