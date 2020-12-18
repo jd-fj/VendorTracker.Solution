@@ -7,8 +7,13 @@ using System.Collections.Generic;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class VendorTests : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+    
     [TestMethod]
     public void VendorConstructor_CreatesAnInstanceOfVendor_Vendor()
     {
