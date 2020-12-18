@@ -20,9 +20,7 @@ namespace VendorTracker.Tests
       string newOrderDescription = "Lindas b&b Description";
       string newOrderDate = "12-18-20";
       int newOrderPrice = 100;
-
       Order newOrder = new Order(newOrderTitle, newOrderDescription, newOrderDate, newOrderPrice);
-
       Assert.AreEqual(newOrderTitle, newOrder.Title);
     }
 
@@ -35,9 +33,7 @@ namespace VendorTracker.Tests
       int newOrderPrice = 100;
       Order newOrder = new Order(newOrderTitle, newOrderDescription, newOrderDate, newOrderPrice);
       List<Order> newList = new List<Order> { newOrder };
-
       List<Order> getResults = Order.GetAll();
-
       CollectionAssert.AreEqual(newList, getResults);
     }
 
@@ -49,5 +45,13 @@ namespace VendorTracker.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      Order newOrderOrder1 = new Order("newOrderTitle", "newOrderDescription", "newOrderDate", 10);
+      Order newOrder2 = new Order("newOrderTitle2", "newOrderDescription2", "newOrderDate2", 10);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 }
