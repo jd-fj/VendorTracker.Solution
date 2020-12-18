@@ -21,8 +21,6 @@ namespace VendorTracker.Models
 
     public static List<Vendor> GetAll()
     {
-      Vendor failVendor = new Vendor("vendorName", "vendorDescription");
-      Vendor failVendor2 = new Vendor("vendorName2", "vendorDescription2");
       return _vendorInstances;
     }
     
