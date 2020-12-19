@@ -6,6 +6,13 @@ namespace VendorTracker.Controllers
 {
   public class OrderController : Controller
   {
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
+    {
+      Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
+    }
+    
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
@@ -15,13 +22,6 @@ namespace VendorTracker.Controllers
     model.Add("order", order);
     model.Add("vendor", vendor);
     return View(model);
-    }
-
-    [HttpGet("/vendors/{vendorId}/orders/new")]
-    public ActionResult New(int vendorId)
-    {
-      Vendor vendor = Vendor.Find(vendorId);
-      return View(vendor);
     }
   }
 }
