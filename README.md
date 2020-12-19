@@ -13,7 +13,7 @@ Build an MVC application to help Pierre track the vendors that purchase baked go
 **_Objectives_**
 - Use Razor to display information on each page.
 
-- A splash page is used.
+- Include a splash page.
 
 - Project has Vendor and Order classes.
 
@@ -55,7 +55,7 @@ _To run this Application, enter the following command in terminal_
 
 * `$ dotnet build`
 * `$ dotnet run`
-* Open a web browser and type the following into the URL bar: `http://localhost:5000/`
+* The application is now running. Open a web browser and navigate to the following in the URL bar: `http://localhost:5000/`
 
 ### Technologies Used
 - C# 
