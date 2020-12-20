@@ -38,7 +38,7 @@ namespace VendorTracker
 
         app.Run(async (context) =>
         {
-          await context.Response.WriteAsync("Something went wrong!");
+          await context.Response.WriteAsync("Whoah there, sorry Pierre! Something went wrong.");
         });
 
     }

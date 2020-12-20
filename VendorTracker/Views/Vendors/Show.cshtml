@@ -1,5 +1,9 @@
 @using VendorTracker.Models;
 
+@{
+  Layout = "_Layout";
+}
+
 <h1>Here are all the orders for this Vendor</h1>
 
 @if (Model["orders"].Count == 0)
@@ -9,8 +13,7 @@
 <ol>
 @foreach (Order order in @Model["orders"])
 {
-  // this will navigate the user to the Show route of Orders, showing the details of the order
-  
+
   <li><a href='/vendors/@Model["vendors"].Id/orders/@order.Id'>@order.Title</a></li>
 }
 </ol>
