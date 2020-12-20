@@ -7,3 +7,7 @@
   background:rgb(255, 243, 243);
   padding:8px;
 }
+
+body {
+  background-image: url(../img/pastry.jpeg)
+}
