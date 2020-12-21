@@ -1,4 +1,4 @@
-#footer {
+div#footer {
   position:fixed;
   bottom:0px;
   left:0px;
@@ -8,6 +8,13 @@
   padding:8px;
 }
 
+.navbar.navbar-inverse{
+  color: red;
+}
+
 body {
-  background-image: url(../img/pastry.jpeg)
+  background-image: url(../img/pastry.jpeg);
+  background-attachment: fixed;
+  background-position: center; 
+  background-size: cover;
 }
