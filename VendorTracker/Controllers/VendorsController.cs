@@ -26,7 +26,6 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-// show route that displays all orders that belong to specific vendor
     [HttpGet("/vendors/{id}")]
     public ActionResult Show(int id)
     {
@@ -38,7 +37,6 @@ namespace VendorTracker.Controllers
       return View(model);
     }
 
-    // creates new Orders within a selected Vendor, not new categories
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string orderTitle, string orderDescription, string orderDate, int orderPrice)
     {
